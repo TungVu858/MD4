@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1><a href="/home">Quay lại trang chủ</a></h1>
+<h1><a href="/customers">Quay lại danh sách khách hàng</a> <br></h1>
+<form  method="post">
+    <input type="hidden" th:value="${customers.id}">
+    <input type="text" name="name" th:value="${customers.name}">
+    <select name="province">
+        <option th:each="p : ${provinces}" th:value="${p.id}" th:text="${p.name}"></option>
+    </select>
+    <button>Sửa</button>
+</form>
+</body>
+</html>
