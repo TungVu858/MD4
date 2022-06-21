@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/posts/create">Tạo bài viết mới</a>
+<table>
+    <tr>
+        <th>Tiêu đề</th>
+        <th>Nội dung</th>
+        <th>Thời gian</th>
+        <th></th>
+    </tr>
+    <tr th:each="post : ${posts}">
+        <td th:text="${post.title}"></td>
+        <td th:text="${post.content}"></td>
+        <td th:text="${post.createAt}"></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>
